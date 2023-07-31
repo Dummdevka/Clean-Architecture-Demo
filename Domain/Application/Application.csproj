@@ -1,0 +1,52 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Domain\Domain.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="12.1.1" />
+    <PackageReference Include="FluentValidation" Version="11.6.0" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.6.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.1.1" />
+    <PackageReference Include="Dapper" Version="2.0.143" />
+    <PackageReference Include="Dapper.SqlBuilder" Version="2.0.78" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="DependencyInjection.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Exceptions\" />
+    <None Remove="Behaviors\" />
+    <None Remove="Abstractions\" />
+    <None Remove="Products\" />
+    <None Remove="Products\Commands\" />
+    <None Remove="Products\Queries\" />
+    <None Remove="Products\Queries\GetProducts\" />
+    <None Remove="Products\Queries\GetProductById\" />
+    <None Remove="Products\Commands\CreateProduct\" />
+    <None Remove="Products\Commands\UpdateProduct\" />
+    <None Remove="Products\Commands\DeleteProduct\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Exceptions\" />
+    <Folder Include="Behaviors\" />
+    <Folder Include="Abstractions\" />
+    <Folder Include="Products\" />
+    <Folder Include="Products\Commands\" />
+    <Folder Include="Products\Queries\" />
+    <Folder Include="Products\Queries\GetProducts\" />
+    <Folder Include="Products\Queries\GetProductById\" />
+    <Folder Include="Products\Commands\CreateProduct\" />
+    <Folder Include="Products\Commands\UpdateProduct\" />
+    <Folder Include="Products\Commands\DeleteProduct\" />
+  </ItemGroup>
+</Project>
